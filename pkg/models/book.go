@@ -43,3 +43,10 @@ func GetBookById(Id int64) (*Book, *gorm.DB) {
 	db := db.Where("ID=?", Id).Find(&book)
 	return &book, db
 }
+
+// DeleteBook deletes a book by its ID from the database.
+func DeleteBook(ID int64) Book {
+	var book Book
+	db.Where("ID=?", ID).Delete(book)
+	return book
+}
