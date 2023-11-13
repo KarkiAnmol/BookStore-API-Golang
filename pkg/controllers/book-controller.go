@@ -65,8 +65,6 @@ func UpdateBook(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println("error while parsing")
 	}
-	models.DeleteBook(ID)
-
 	updateBook := &models.Book{}
 	utils.ParseBody(r, updateBook)
 
