@@ -6,6 +6,7 @@ import (
 
 	"github.com/KarkiAnmol/BookStore-API-Golang/pkg/routes"
 	"github.com/gorilla/mux"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
 func main() {
