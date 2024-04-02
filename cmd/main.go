@@ -13,5 +13,6 @@ func main() {
 	r := mux.NewRouter()
 	routes.RegisterBookStoreRoutes(r)
 	http.Handle("/", r)
+	log.Println("Server starting on http://localhost:8083...")
 	log.Fatal(http.ListenAndServe("localhost:8083", r))
 }
