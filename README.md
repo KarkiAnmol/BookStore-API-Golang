@@ -120,6 +120,25 @@ The API server will start on `localhost:8083`.
 | PUT    | `/book/{id}`        | Update a book by its ID.            |
 | DELETE | `/book/{id}`        | Delete a book by its ID.            |
 
+## Example
+To create a new Book record through a POST request, you would only need to supply the JSON data for the fields you've defined for manual input: Name, Author, and Publication. Here is an example of the JSON data you might send in the body of a POST request, using Postman, to create a new Book:
+```bash
+{
+  "name": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "publication": "1925"
+}
+
+```
+Make sure your request is set to Content-Type: application/json. This header informs your server that the request body format is JSON.
+
+Here's an example using curl to make the POST request:
+```bash
+curl -X POST http://localhost:8083/book/ \
+     -H "Content-Type: application/json" \
+     -d '{"name": "The Great Gatsby", "author": "F. Scott Fitzgerald", "publication": "1925"}'
+
+```
 ## Development
 
 To contribute to this project, please create a fork and submit a pull request.
