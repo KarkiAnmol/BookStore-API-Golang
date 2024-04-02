@@ -14,7 +14,7 @@ var (
 // It connects to a MySQL database with the specified connection string.
 // If an error occurs during the connection, it panics.
 func Connect() {
-	d, err := gorm.Open("mysql", "akhil:Axlesharma@12@/simplerest?charset=utf8&parseTime=True&loc=Local")
+	d, err := gorm.Open("mysql", "anmol:mypassword123@tcp(localhost:3306)/simplerest?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
 		panic(err)
 	}
